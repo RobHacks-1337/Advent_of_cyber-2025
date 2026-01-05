@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Mon, 05 Jan 2026 00:58:42 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Set-Cookie: PHPSESSID=l1i8006jdbjsucmh5k35ccdacm; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 512
+Content-Type: application/json
+
+{
+    "service": "Wormhole Control Panel",
+    "endpoints": {
+        "\/terminal.php?action=info": "Public info",
+        "\/terminal.php?action=login": "POST: username,password",
+        "\/terminal.php?action=pin": "POST: attempt PIN to get temporary admin token",
+        "\/terminal.php?action=status": "GET: wormhole status",
+        "\/terminal.php?action=close": "POST: close wormhole"
+    },
+    "note": "This panel only answers to terminal user agents. Use the endpoints to fully close the wormhole."
+}
