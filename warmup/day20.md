@@ -17,8 +17,9 @@ In context of web application, it happens when multiple users or automated req t
 - Atomicity violation: when parts of a process run separately, another request can sneak in between and cause inconsistent results. [Eg: paying for an item but just before system confirms, the price gets changed by someone]
 
 ## Steps:
-```
+
 Q1.
+```
   1. Setting up BurpSuite:
 	- Enable foxyproxy in browser and open burpsuite
 	- Go to "Proxy" tab and disable intercept (to allow web req to flow normally)
@@ -34,13 +35,15 @@ Q1.
 	- Then again right click the same tab and click "duplicate tab" > Select appropriate value as per stock.
 	- Drop down send button > Send group in parallel (last-byte sync) [This will send all the checkout req at the exact moment]
   	  [We are *Here]
+
   4. Obtain the flag:
 	- Click send and refresh the website to obtain the flag:
 ```
-	**Flag**: `THM{WINNER_OF_R@CE007}`
-Q2.
--> Same steps as above
-	**Flag**: THM{WINNER_OF_Bunny_R@ce}
+**Flag**: `THM{WINNER_OF_R@CE007}`
+
+Q2.  
+-> Same steps as above  
+**Flag**: `THM{WINNER_OF_Bunny_R@ce}`
 
 ## Skills Learned:
 - Understanding race conditions and its affect in web app
