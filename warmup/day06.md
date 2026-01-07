@@ -1,3 +1,5 @@
+# CTF Write-Up: Malware Analysis - Egg-xecutable
+
 ## Story:
 -> A SUS email is recieved from "ELf McClause" with an executable file "HopHelper.exe" attached.
 
@@ -11,6 +13,6 @@
 
 ## Skills Learned:
 - Malware Analysis:
-	Static: Analyzing/Inspecting malware without running  
-	Dynamic: Analyzing malware by executing it
+	- Static: Analyzing/Inspecting malware without running  
+	- Dynamic: Analyzing malware by executing it
 - Sandbox Environments

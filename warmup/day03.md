@@ -12,7 +12,7 @@ SPL Query:
 ```splunk
 	index=main sourcetype="web_traffic"
 ```
-> Filters only logs of web_traffic dataset.  
+> Filters only logs of web_traffic dataset.
 -> Then go to interesting_field > client_ip and view the top suspicious ip with most req
 
 **Q2.**  
@@ -22,9 +22,10 @@ SPL Query:
 	index=main sourcetype=web_traffic | timechart span=1d count | sort by count | reverse
 ```
 > Timechart -> stastical command used to display events into fixed time intervals  
-> span=1d -> groups events of 1day and displays 
-> sort by -> sorts the output by count in asc order 
-> reverse -> sakasama(inverts) the output  
+> span=1d -> groups events of 1day and displays   
+> sort by -> sorts the output by count in asc order  
+> reverse -> sakasama(inverts) the output
+
 SPL Query:  
 ```splunk
 or,	index=main sourcetype="web_traffic" | timechart span=1d count | sort -count
@@ -40,10 +41,11 @@ SPL Query:
 ```splunk
 	sourcetype=web_traffic client_ip="198.51.100.55" AND path="*..\/*"	
 ```
-> client_ip -> filters out the events/logs of specific ip only
-> path="*..\/*" checks for path traversal vulnerabilites
+> client_ip -> filters out the events/logs of specific ip only  
+path="*..\/*" checks for path traversal vulnerabilites
  
 -> Then, just check total no of events
+
 SPL Query:  
 ```splunk
 	sourcetype=web_traffic client_ip="198.51.100.55" AND path="*..\/..\/*" OR path="*redirect*" | stats count by path
@@ -60,7 +62,7 @@ SPL Query:
 ```
 > src_ip -> ip of the server being compromised  
 > dest_ip -> ip of attacker  
-> action=ALLOWED -> Filters the events allowed by firewall 
+> action=ALLOWED -> Filters the events allowed by firewall  
 > stats sum(bytes_transferred) by src_ip -> to view total volume of data exfiltrated
 
 ## Skills Learned:

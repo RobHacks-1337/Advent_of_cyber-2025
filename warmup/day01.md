@@ -1,9 +1,11 @@
+# CTF Write-Up: Linux CLI - Shells Bells
+
 ## Story:
--> Mcskidy has been kidnapped!!!
+-> Mcskidy has been kidnapped!!!  
 We are looking for clues in the Linux server processing Cristmas whishlist
 
 ## Clues for vault passcode:
-
+```
 Access the user account:
 	username: eddi_knapp
 	password: S0mething1Sc0ming
@@ -20,8 +22,10 @@ Read the ledger’s older pages.
 When pixels sleep, their tails sometimes whisper plain words.
 Listen to the tail.
 	-	c0M1nG
+```
 
 ## Walkthrough for side quest:
+
 1) 
 pass1	- 
 
@@ -32,5 +36,5 @@ pass2	-
 pass3	-       c0M1nG
 
 ## Skills Learned: 
--> Basic navigation around the linux file system architecture
--> Elevating to the super user - sudo su
+- Basic navigation around the linux file system architecture
+- Elevating to the super user - sudo su
